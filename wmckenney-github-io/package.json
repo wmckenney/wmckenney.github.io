@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-	"deploy": "ng build --prod --base-href 'https://mckenney.dev/' && ngh --branch=master --cname=mckenney.dev"
+	"deploy": "ng build --prod && ngh --branch=master --cname=mckenney.dev"
 	},
   "private": true,
   "dependencies": {
