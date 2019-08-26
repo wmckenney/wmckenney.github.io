@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+      <button mat-button [routerLink]="'/home'">LOGO</button>
+      <span class="menu-spacer"></span>
+      <div routerLinkActive="active">
+            <a mat-button [routerLink]="'/about'"> 0x00 About </a>
+            <a mat-button [routerLink]="'/experience'"> 0x01 Experience </a>
+            <a mat-button [routerLink]="'/projects'"> 0x02 Projects </a>
+            <a mat-button [routerLink]="'/links'"> 0x03 Links </a>
+            <a mat-button [routerLink]="'/contact'"> 0x04 Contact </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+  
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list routerLinkActive="active">
+            <a mat-list-item [routerLink]="'/about'"> 0x00 About </a>
+            <a mat-list-item [routerLink]="'/experience'"> 0x01 Experience </a>
+            <a mat-list-item [routerLink]="'/projects'"> 0x02 Projects </a>
+            <a mat-list-item [routerLink]="'/links'"> 0x03 Links </a>
+            <a mat-list-item [routerLink]="'/contact'"> 0x04 Contact </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
