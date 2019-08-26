@@ -3,9 +3,9 @@
         <button mat-icon-button>
             <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
         </button>
-      <button mat-button [routerLink]="'/home'">LOGO</button>
-      <span class="menu-spacer"></span>
-      <div routerLinkActive="active">
+        <button mat-button [routerLink]="'/home'">LOGO</button>
+        <span class="menu-spacer"></span>
+        <div routerLinkActive="active">
             <a mat-button [routerLink]="'/about'"> 0x00 About </a>
             <a mat-button [routerLink]="'/experience'"> 0x01 Experience </a>
             <a mat-button [routerLink]="'/projects'"> 0x02 Projects </a>
@@ -16,7 +16,7 @@
 </mat-toolbar>
   
 <mat-sidenav-container>
-    <mat-sidenav #sidenav>
+    <mat-sidenav #sidenav mode="push">
         <mat-nav-list routerLinkActive="active">
             <a mat-list-item [routerLink]="'/about'"> 0x00 About </a>
             <a mat-list-item [routerLink]="'/experience'"> 0x01 Experience </a>
